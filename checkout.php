@@ -37,9 +37,9 @@ if(isset($_POST['order'])){
       $delete_cart = $conn->prepare("DELETE FROM `cart` WHERE user_id = ?");
       $delete_cart->execute([$user_id]);
 
-      $message[] = 'order placed successfully!';
+      $message[] = 'đơn hàng được đặt thành công!';
    }else{
-      $message[] = 'your cart is empty';
+      $message[] = 'giỏ hàng còn trống';
    }
 
 }
@@ -69,7 +69,7 @@ if(isset($_POST['order'])){
 
    <form action="" method="POST">
 
-   <h3>your orders</h3>
+   <h3>giỏ hàng của bạn</h3>
 
       <div class="display-orders">
       <?php
@@ -87,15 +87,15 @@ if(isset($_POST['order'])){
       <?php
             }
          }else{
-            echo '<p class="empty">your cart is empty!</p>';
+            echo '<p class="empty">giỏ hàng của bạn còn trống!</p>';
          }
       ?>
          <input type="hidden" name="total_products" value="<?= $total_products; ?>">
          <input type="hidden" name="total_price" value="<?= $grand_total; ?>" value="">
-         <div class="grand-total">grand total : <span>$<?= $grand_total; ?>/-</span></div>
+         <div class="grand-total">tổng cộng : <span><?= $grand_total; ?> VNĐ</span></div>
       </div>
 
-      <h3>place your orders</h3>
+      <h3>đơn đặt hàng của bạn</h3>
 
       <div class="flex">
          <div class="inputBox">

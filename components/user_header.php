@@ -22,14 +22,10 @@
          <a href="about.php">VỀ CHÚNG TÔI</a>
          <a href="orders.php">ĐƠN HÀNG</a>
          <a href="shop.php">MUA HÀNG</a>
-         <a href="contact.php">LIÊN HỆ</a>
       </nav>
 
       <div class="icons">
          <?php
-            $count_wishlist_items = $conn->prepare("SELECT * FROM `wishlist` WHERE user_id = ?");
-            $count_wishlist_items->execute([$user_id]);
-            $total_wishlist_counts = $count_wishlist_items->rowCount();
 
             $count_cart_items = $conn->prepare("SELECT * FROM `cart` WHERE user_id = ?");
             $count_cart_items->execute([$user_id]);
@@ -37,7 +33,6 @@
          ?>
          <div id="menu-btn" class="fas fa-bars"></div>
          <a href="search_page.php"><i class="fas fa-search"></i></a>
-         <a href="wishlist.php"><i class="fas fa-heart"></i><span>(<?= $total_wishlist_counts; ?>)</span></a>
          <a href="cart.php"><i class="fas fa-shopping-cart"></i><span>(<?= $total_cart_counts; ?>)</span></a>
          <div id="user-btn" class="fas fa-user"></div>
       </div>
@@ -59,10 +54,10 @@
          <?php
             }else{
          ?>
-         <p>please login or register first!</p>
+         <p>vui lòng đăng nhập hoặc đăng ký!</p>
          <div class="flex-btn">
-            <a href="user_register.php" class="option-btn">register</a>
-            <a href="user_login.php" class="option-btn">login</a>
+            <a href="user_register.php" class="option-btn">đăng ký</a>
+            <a href="user_login.php" class="option-btn">đăng nhập</a>
          </div>
          <?php
             }

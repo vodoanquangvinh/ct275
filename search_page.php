@@ -10,8 +10,6 @@ if(isset($_SESSION['user_id'])){
    $user_id = '';
 };
 
-include 'components/wishlist_cart.php';
-
 ?>
 
 <!DOCTYPE html>
@@ -35,7 +33,7 @@ include 'components/wishlist_cart.php';
 
 <section class="search-form">
    <form action="" method="post">
-      <input type="text" name="search_box" placeholder="search here..." maxlength="100" class="box" required>
+      <input type="text" name="search_box" placeholder="tìm kiếm tại đây" maxlength="100" class="box" required>
       <button type="submit" class="fas fa-search" name="search_btn"></button>
    </form>
 </section>

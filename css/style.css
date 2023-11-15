@@ -13,7 +13,7 @@
 }
 
 *{
-   font-family: 'Nunito', sans-serif;
+   font-family: 'inherit', sans-serif;
    margin:0; padding:0;
    box-sizing: border-box;
    outline: none; border:none;
@@ -136,7 +136,7 @@ section{
    text-align: center;
    color:var(--red);
    border-radius: .5rem;
-   font-size: 2rem;
+   font-size: 1.5rem;
    text-transform: capitalize;
 }
 
@@ -211,7 +211,7 @@ section{
    box-shadow: var(--box-shadow);
    border:var(--border);
    padding:2rem;
-   width: 30rem;
+   width: 35rem;
    padding-top: 1.2rem;
    display: none;
    animation:fadeIn .2s linear;
@@ -913,6 +913,7 @@ section{
    flex-wrap: wrap;
    gap:1.5rem;
    align-items: flex-start;
+   justify-content: center;
 }
 
 .orders .box-container .box{

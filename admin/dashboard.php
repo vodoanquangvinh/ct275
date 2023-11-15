@@ -36,9 +36,9 @@ if(!isset($admin_id)){
    <div class="box-container">
 
       <div class="box">
-         <h3>welcome!</h3>
+         <h3>Xin chào</h3>
          <p><?= $fetch_profile['name']; ?></p>
-         <a href="update_profile.php" class="btn">update profile</a>
+         <a href="update_profile.php" class="btn">chỉnh sửa thông tin</a>
       </div>
 
       <div class="box">
@@ -53,8 +53,8 @@ if(!isset($admin_id)){
             }
          ?>
          <h3><span>$</span><?= $total_pendings; ?><span>/-</span></h3>
-         <p>total pendings</p>
-         <a href="placed_orders.php" class="btn">see orders</a>
+         <p>tổng tiền chờ xử lý</p>
+         <a href="placed_orders.php" class="btn">xem đơn hàng</a>
       </div>
 
       <div class="box">
@@ -69,8 +69,8 @@ if(!isset($admin_id)){
             }
          ?>
          <h3><span>$</span><?= $total_completes; ?><span>/-</span></h3>
-         <p>completed orders</p>
-         <a href="placed_orders.php" class="btn">see orders</a>
+         <p>đơn hàng đã hoàn thành</p>
+         <a href="placed_orders.php" class="btn">xem đơn hàng</a>
       </div>
 
       <div class="box">

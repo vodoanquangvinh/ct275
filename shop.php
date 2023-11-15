@@ -10,8 +10,6 @@ if(isset($_SESSION['user_id'])){
    $user_id = '';
 };
 
-include 'components/wishlist_cart.php';
-
 ?>
 
 <!DOCTYPE html>
@@ -35,7 +33,7 @@ include 'components/wishlist_cart.php';
 
 <section class="products">
 
-   <h1 class="heading">latest products</h1>
+   <h1 class="heading">tất cả sản phẩm</h1>
 
    <div class="box-container">
 
@@ -63,7 +61,7 @@ include 'components/wishlist_cart.php';
    <?php
       }
    }else{
-      echo '<p class="empty">no products found!</p>';
+      echo '<p class="empty">hiện tại không có sản phẩm nào!</p>';
    }
    ?>
 
